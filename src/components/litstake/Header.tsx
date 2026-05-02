@@ -13,9 +13,7 @@ const Header = ({ address, onConnect }: Props) => {
     <header className="sticky top-0 z-40 backdrop-blur-xl bg-background/60 border-b border-primary/15">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-3">
-          <div className="grid h-10 w-10 place-items-center rounded-xl bg-[#1A2A40]">
-            <Logo />
-          </div>
+          <Logo size={40} />
           <div className="leading-tight">
             <div className="font-display text-base font-bold tracking-widest text-foreground">LitStake</div>
             <div className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground">Protocol</div>
