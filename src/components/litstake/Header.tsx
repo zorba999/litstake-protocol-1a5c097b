@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Wallet, Compass, Droplet, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import Logo from "./Logo";
 
 const truncate = (a: string) => `${a.slice(0, 6)}...${a.slice(-4)}`;
 
@@ -12,9 +13,8 @@ const Header = ({ address, onConnect }: Props) => {
     <header className="sticky top-0 z-40 backdrop-blur-xl bg-background/60 border-b border-primary/15">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-3">
-          <div className="relative grid h-10 w-10 place-items-center rounded-xl font-display text-lg font-black text-primary-foreground"
-               style={{ background: 'var(--gradient-primary)', boxShadow: 'var(--glow-soft)' }}>
-            LS
+          <div className="grid h-10 w-10 place-items-center rounded-xl bg-[#1A2A40]">
+            <Logo />
           </div>
           <div className="leading-tight">
             <div className="font-display text-base font-bold tracking-widest text-foreground">LitStake</div>
