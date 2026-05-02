@@ -1,42 +1,19 @@
+import logoImg from "@/assets/litstake-logo.png";
+
 interface Props {
   className?: string;
   size?: number;
 }
 
 const Logo = ({ className, size = 40 }: Props) => (
-  <svg
-    viewBox="0 0 40 40"
+  <img
+    src={logoImg}
+    alt="LitStake logo"
     width={size}
     height={size}
-    xmlns="http://www.w3.org/2000/svg"
-    aria-label="LitStake logo"
-    className={className}
-    style={{ filter: "drop-shadow(0 0 6px rgba(100,191,211,0.55))" }}
-  >
-    <rect
-      x="1.5"
-      y="1.5"
-      width="37"
-      height="37"
-      rx="9"
-      fill="#1A2A40"
-      stroke="#64BFD3"
-      strokeWidth="1.5"
-    />
-    <text
-      x="50%"
-      y="52%"
-      textAnchor="middle"
-      dominantBaseline="middle"
-      fontFamily="Rajdhani, system-ui, sans-serif"
-      fontWeight="700"
-      fontSize="18"
-      letterSpacing="0.5"
-      fill="#64BFD3"
-    >
-      LS
-    </text>
-  </svg>
+    style={{ width: size, height: size }}
+    className={`object-contain rounded-lg ${className ?? ""}`}
+  />
 );
 
 export default Logo;
